@@ -1,67 +1,71 @@
-// **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work in 421 and you need to brush up on your HTML elements**
+'use strict';
+
+// brings in the assert module for unit testing
+const assert = require('assert');
+// brings in the readline module to access the command line
+const readline = require('readline');
+// use the readline module to print out to the command line
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
 
-// ***************************
-//          PART ONE
-// ***************************
-// Write a JavaScript program to display the current day and time, start with:
-console.log(new Date)
+const pigLatin = (word) => {
 
-const displayDate = () => {
-  const currentDate = new Date()
+  // Your code here
 
-  document.getElementById("display-element").innerHTML = currentDate;
 }
- 
 
-// Write a JavaScript program to convert a number to a string.
+// the first function called in the program to get an input from the user
+// to run the function use the command: node main.js
+// to close it ctrl + C
+const getPrompt = () => {
+  rl.question('word ', (answer) => {
+    console.log( pigLatin(answer) );
+    getPrompt();
+  });
+}
 
+// Unit Tests
+// You use them run the command: npm test main.js
+// to close them ctrl + C
+if (typeof describe === 'function') {
 
+  describe('#pigLatin()', () => {
+    it('should translate a simple word', () => {
+      assert.equal(pigLatin('car'), 'arcay');
+      assert.equal(pigLatin('dog'), 'ogday');
+    });
+    it('should translate a complex word', () => {
+      assert.equal(pigLatin('create'), 'eatecray');
+      assert.equal(pigLatin('valley'), 'alleyvay');
+    });
+    it('should attach "yay" if word begins with vowel', () => {
+      assert.equal(pigLatin('egg'), 'eggyay');
+      assert.equal(pigLatin('emission'), 'emissionyay');
+    });
+    it('should lowercase and trim word before translation', () => {
+      assert.equal(pigLatin('HeLlO '), 'ellohay');
+      assert.equal(pigLatin(' RoCkEt'), 'ocketray');
+    });
+  });
+} else {
 
-// Write a JavaScript program to convert a string to the number.
+  getPrompt();
 
-
-
-// Write a JavaScript program that takes in different datatypes and prints out whether they are a:
-  // * Boolean
-  // * Null
-  // * Undefined
-  // * Number
-  // * NaN
-  // * String
-  
-
-  
-// Write a JavaScript program that adds 2 numbers together.
-
-
-
-// Write a JavaScript program that runs only when 2 things are true.
-
-
-
-// Write a JavaScript program that runs when 1 of 2 things are true.
-
-
-
-// Write a JavaScript program that runs when both things are not true.  
-
-// ***************************
-//         PART TWO
-// ***************************
-
-// 1. download Live-Server by Ritwick Dey, 
-// 2. reload VS Code, 
-// 3. click the "Go Live" button
-// 4. Go local host 5500 or http://127.0.0.1:5500/index.html to see your web page
-// 5. Or go use the `npm start` command and navigate to localhost:8080 (ctrl + C to close)
-// 6. go to `index.html` 
-// 7. create inputs, buttons and event listeners that render the code blocks you built above to the DOM.
+}
 
 
 
 
-// Additional Resources
-// Video1: https://player.vimeo.com/video/377147232
-// Video2: https://www.youtube.com/embed/bkvH28PXLWc
-// Video3: https://www.youtube.com/embed/TrGI9Yki-24
+
+
+// **********
+//   HINTS
+// **********
+
+// break your code into pieces and focus on one at a time...
+// 1. if word begins with a vowel send to one function: adds "yay"
+// 2. if word begins in with a consonant send to another function: splices off beginning, returns word with new ending.
+// 3. if multiple words, create array of words, loop over them, sending them to different functions and creating a new array with the new words.

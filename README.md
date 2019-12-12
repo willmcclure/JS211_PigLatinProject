@@ -4,26 +4,31 @@
 
 # Austin Coding Academy
 
-## JavaScript 211 Project: Current Date and Time
+## JavaScript 211 Project: Pig Latin
 
-### Part 1
+### Today's Checklist
 
-1. Navigate to `main.js`
-1. Read the instructions and build the functions to satisfy the tasks.
-1. There are no tests for this project.
-
-### Part 2
-
-1. Navigate to `index.html`
-1. Notice the link to `main.js`
-1. Display your results to the user in the DOM using `<button>` and `<input>`.
+1. Fork and Clone [Pig Latin Repo](https://github.com/AustinCodingAcademy/JS211_PigLatinProject.git)
+1. Ensure you have installed all dependencies/packages: `npm i`
+1. Look at the Unit Test, see what is being called, passed as input arguments, and what the expected result are.
+1. Ensure you know how to run the unit test:
+    * `npm test main.js`
+1. Use a whiteboard to work out a solution to building the Pig Latin program
+1. Translate the broad ideas to psuedo code
+1. Convert the psuedo code to real JavaScript Code
+1. Type into your text editor the JavaScript code you've come up with one step at a time
+1. Work through your bugs.
+1. Use `node main.js` to run the game
+1. Achieve green checks for each of your unit tests.
 
 ### Hints
 
+1. Run your unit tests first!!
 1. Use [repl.it](https://www.repl.it) to write the solution code first. (its a faster environment vs using the `node main.js` command over and over again.)
-1. Download the Live Server package to VS Code by Ritwick Dey to view it at localhost:5500
-1. **OR** use the `npm start` command to view it at localhost:8080
-1. Use the [JS Docs at MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString)
+1. Read the comments in `main.js`
+1. Use the [JS Docs at W3S](https://www.w3schools.com/jsref/jsref_split.asp)
+1. Push yourself further.
+1. Look at your hints!
 1. **Clone, setup, testing, and running instructions for all projects is below**
 
 ******
@@ -66,7 +71,6 @@ GitHub `git push`
     git commit -m "Initial Commit"
     git push origin gh-pages
     ```
-
 
 1. Now go to your forked repository on GitHub (at
   https://github.com/your-username/javascript-workbook). A little yellow box
