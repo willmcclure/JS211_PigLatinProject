@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    width: 600px;
+    background-color: aqua;
+}
+
+section {
+    margin: 20 auto;
+}
+
+#input {
+    padding: 20px;
+}
+
+h3 {
+    padding: 20px;
+}
+
+button {
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 10px;
+}

@@ -2,14 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Pig Latin Translator</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
-    <hr/>
+    <header>
+      <h1>Translate your favorite word into Pig Latin!</h1>
+    </header>
+    <section>
+      <textarea id="input" type="text"  cols="20" rows="5" placeholder="What would you like to translate?"></textarea>
+      <br>
+      <button onclick="pigLatin()"" type="button" id="translate">Translate</button>
+      <h2>Your Pig Latin word is:</h2>
+      <h3 id="output"></h3>
+      <button id="reset" onclick="reset()">Reset</button>
+    </section>
   </body>
+  <script src="./main.js"></script>
 </html>
